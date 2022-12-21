@@ -1,0 +1,9 @@
+The code is a python script that creates a simple blockchain and a Flask web app to interact with it.
+The blockchain consists of a series of blocks, each containing a proof, a list of transactions, and a reference to the previous block's hash.
+The proof is obtained by finding a number that, when hashed with the previous block's proof, produces a certain number of leading zeros (specified by the '0000' string).
+The Flask web app exposes a number of routes that allow you to add transactions, mine new blocks, and view the current state of the blockchain.
+For example, the /mine_block route allows you to mine a new block by finding a proof that satisfies the proof-of-work requirement. 
+The /add_transaction route allows you to add a transaction to the list of pending transactions, which will be included in the next mined block.
+The /replace_chain route allows you to attempt to replace the current chain with a longer valid chain, if one is available on the network.
+The /get_chain route allows you to view the current state of the blockchain.
+In addition, the script includes a method to add a new node to the network (add_node) and a method to validate the integrity of the blockchain (is_chain_valid).
